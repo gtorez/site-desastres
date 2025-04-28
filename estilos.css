@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset geral */
 * {
     margin: 0;
     padding: 0;
@@ -52,7 +52,7 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -62,10 +62,6 @@ nav ul li a {
     align-items: center;
     text-align: center;
     padding: 2rem;
-}
-
-.hero-content {
-    margin-top: 5rem;
 }
 
 .typing-container {
@@ -98,7 +94,7 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* Botão pulse */
+/* Botão pulsante */
 .pulse {
     animation: pulse 2s infinite;
 }
@@ -182,7 +178,7 @@ nav ul li a {
     opacity: 1;
 }
 
-/* Seções */
+/* Seções Saúde Única e Quem Somos */
 .saude-unica, .quem-somos, .contato {
     padding: 6rem 2rem;
     background: #f7fafc;
@@ -192,6 +188,17 @@ nav ul li a {
 .saude-unica h2, .quem-somos h2, .contato h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+.card-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 1rem;
 }
 
 /* Formulário de Contato */
