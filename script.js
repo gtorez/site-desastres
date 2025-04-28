@@ -22,7 +22,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-// LIGHTBOX GALERIA
+// LIGHTBOX PARA AS IMAGENS DA GALERIA
 function openLightbox(src, caption) {
     document.getElementById('lightbox').style.display = "flex";
     document.getElementById('lightbox-img').src = src;
@@ -33,7 +33,7 @@ function closeLightbox() {
     document.getElementById('lightbox').style.display = "none";
 }
 
-// ANIMAÇÃO DE DIGITAÇÃO
+// EFEITO DE DIGITAÇÃO NA PÁGINA INICIAL
 const texto = "Desastres ambientais não dão aviso. Esteja preparado.";
 let index = 0;
 
@@ -45,4 +45,10 @@ function digitar() {
     }
 }
 
-window.onload = digitar;
+// Só iniciar a digitação na página inicial (se existir o elemento)
+window.onload = function() {
+    const typingText = document.getElementById("typing-text");
+    if (typingText) {
+        digitar();
+    }
+}
