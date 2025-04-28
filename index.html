@@ -12,11 +12,10 @@
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <nav id="menu" class="hidden">
         <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#saude">Saúde Única</a></li>
-            <li><a href="#quem-somos">Quem Somos</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="galeria.html" target="_blank">Galeria</a></li>
+            <li><a href="saude.html" target="_blank">Saúde Única</a></li>
+            <li><a href="quem-somos.html" target="_blank">Quem Somos</a></li>
         </ul>
     </nav>
 </header>
@@ -29,51 +28,7 @@
         <h1 id="typing-text"></h1>
     </div>
     <p>Conheça os impactos, saiba como agir e proteger o futuro do nosso planeta.</p>
-    <a href="#galeria" class="btn pulse">Explorar</a>
-</section>
-
-<section id="galeria" class="gallery">
-    <h2>Galeria de Desastres</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="brumadinho.jpg" alt="Brumadinho" onclick="openLightbox(this.src, 'Brumadinho - Tragédia de 2019')">
-            <div class="desc">
-                <h3>Brumadinho</h3>
-                <p>O rompimento da barragem devastou vidas e comprometeu o ecossistema da região.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="amazonia.jpg" alt="Queimadas na Amazônia" onclick="openLightbox(this.src, 'Queimadas - Crise ambiental')">
-            <div class="desc">
-                <h3>Queimadas na Amazônia</h3>
-                <p>As queimadas aceleram a destruição da maior floresta tropical do mundo.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="oleo.jpg" alt="Vazamento de Óleo" onclick="openLightbox(this.src, 'Vazamento de Óleo - Danos marinhos')">
-            <div class="desc">
-                <h3>Vazamento de Óleo</h3>
-                <p>O desastre de óleo no litoral brasileiro impactou praias, fauna e comunidades pesqueiras.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="saude" class="saude-unica">
-    <h2>Saúde Única</h2>
-    <div class="card-section">
-        <p>Saúde Única reconhece que a saúde dos seres humanos está interligada à saúde animal e ambiental.  
-        Um desequilíbrio em qualquer uma dessas áreas aumenta o risco de desastres e doenças globais.  
-        Trabalhar em conjunto é essencial para prevenir novas tragédias e construir um mundo mais resiliente.</p>
-    </div>
-</section>
-
-<section id="quem-somos" class="quem-somos">
-    <h2>Quem Somos</h2>
-    <div class="card-section">
-        <p>O Impacto Terra é um projeto voltado à educação ambiental. Nossa missão é alertar, conscientizar e inspirar a mudança através da informação.  
-        Acreditamos que a transformação global começa pela consciência individual.</p>
-    </div>
+    <a href="galeria.html" target="_blank" class="btn pulse">Explorar</a>
 </section>
 
 <section id="contato" class="contato">
@@ -94,12 +49,6 @@
         <a href="#">LinkedIn</a>
     </div>
 </footer>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
-    <p id="lightbox-caption"></p>
-</div>
 
 <script src="script.js"></script>
 
