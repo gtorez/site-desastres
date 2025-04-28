@@ -1,10 +1,10 @@
-// Menu Hamburguer
+// MENU HAMBÚRGUER
 function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('hidden');
 }
 
-// Botão Voltar ao Topo
+// BOTÃO VOLTAR AO TOPO
 let btnTopo = document.getElementById("btnTopo");
 
 window.onscroll = function() {scrollFunction()};
@@ -18,11 +18,11 @@ function scrollFunction() {
 }
 
 function topFunction() {
-    document.body.scrollTop = 0; 
+    document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
-// Lightbox da Galeria
+// LIGHTBOX GALERIA
 function openLightbox(src, caption) {
     document.getElementById('lightbox').style.display = "flex";
     document.getElementById('lightbox-img').src = src;
@@ -33,7 +33,7 @@ function closeLightbox() {
     document.getElementById('lightbox').style.display = "none";
 }
 
-// Efeito de Digitação (Typing Animation)
+// ANIMAÇÃO DE DIGITAÇÃO
 const texto = "Desastres ambientais não dão aviso. Esteja preparado.";
 let index = 0;
 
