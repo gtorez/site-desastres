@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Impacto Terra</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="menu" class="hidden">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="galeria.html" target="_blank">Galeria</a></li>
+            <li><a href="saude.html" target="_blank">Saúde Única</a></li>
+            <li><a href="quem-somos.html" target="_blank">Quem Somos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<button onclick="topFunction()" id="btnTopo" title="Voltar ao topo">↑</button>
+
+<section id="galeria" class="gallery">
+    <h2>Galeria de Desastres</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="brumadinho.jpg" alt="Brumadinho" onclick="openLightbox(this.src, 'Brumadinho - Tragédia de 2019')">
+            <div class="desc">
+                <h3>Brumadinho</h3>
+                <p>O rompimento da barragem devastou vidas e ecossistemas em Minas Gerais.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="amazonia.jpg" alt="Queimadas na Amazônia" onclick="openLightbox(this.src, 'Queimadas - Crise ambiental')">
+            <div class="desc">
+                <h3>Queimadas na Amazônia</h3>
+                <p>As queimadas ameaçam a biodiversidade e contribuem para o aquecimento global.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="oleo.jpg" alt="Vazamento de Óleo" onclick="openLightbox(this.src, 'Vazamento de Óleo - Danos marinhos')">
+            <div class="desc">
+                <h3>Vazamento de Óleo</h3>
+                <p>Desastre ambiental que afetou gravemente a vida marinha e comunidades litorâneas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 Impacto Terra. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+    <p id="lightbox-caption"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
