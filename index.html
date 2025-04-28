@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desastres Ambientais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Desastres Ambientais</h1>
+        <nav>
+            <button onclick="scrollToSection('sobre')">Sobre</button>
+            <button onclick="scrollToSection('galeria')">Galeria</button>
+            <button onclick="window.location.href='saude.html'">Saúde Única</button>
+            <button onclick="scrollToSection('contato')">Contato</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>O que são desastres ambientais?</h2>
+            <p>São eventos naturais ou causados pelo ser humano que provocam impactos negativos ao meio ambiente, à sociedade e à economia. Incluem secas, enchentes, vazamentos de óleo e queimadas.</p>
+        </section>
+
+        <section id="galeria">
+            <h2>Galeria de Desastres</h2>
+            <div class="galeria">
+                <div class="item"><img src="brumadinho.jpg" alt="Brumadinho"><p><strong>Brumadinho (2019)</strong>: Rompimento da barragem.</p></div>
+                <div class="item"><img src="mariana.jpg" alt="Mariana"><p><strong>Mariana (2015)</strong>: Desastre da Samarco.</p></div>
+                <div class="item"><img src="amazonia.jpg" alt="Amazônia"><p><strong>Amazônia (2019)</strong>: Queimadas ilegais.</p></div>
+                <div class="item"><img src="oleo.jpg" alt="Óleo"><p><strong>Óleo (2019)</strong>: Vazamento no litoral.</p></div>
+                <div class="item"><img src="petropolis.jpg" alt="Petrópolis"><p><strong>Petrópolis (2022)</strong>: Deslizamentos no RJ.</p></div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Projeto Acadêmico | Universidade São Judas Tadeu</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
