@@ -1,123 +1,259 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
+/* Corpo do site */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4fff5;
-    color: #2e7d32;
-    line-height: 1.6;
+    background: linear-gradient(to bottom, #2e7d32, #a5d6a7);
+    color: #333;
 }
 
-header {
-    background-color: #1b5e20;
+/* Cabeçalho */
+.header {
+    background: #1b5e20;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-nav button {
-    background-color: #388e3c;
+.menu-btn {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav.hidden {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    margin-top: 5rem;
+}
+
+.typing-container {
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #cfd8dc;
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: #43a047;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.4s, transform 0.4s;
+}
+
+.btn:hover {
+    background: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Botão pulse */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Botão Voltar ao Topo */
+#btnTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #43a047;
+    color: white;
     cursor: pointer;
-    transition: background 0.3s ease;
+    padding: 15px;
+    border-radius: 50%;
 }
 
-nav button:hover {
-    background-color: #2e7d32;
+#btnTopo:hover {
+    background-color: #388e3c;
 }
 
-main {
-    padding: 30px;
-}
-
-section, .saude {
-    background-color: #ffffff;
-    margin-bottom: 30px;
-    padding: 25px;
-    border-left: 8px solid #81c784;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.item {
-    max-width: 300px;
+/* Galeria */
+.gallery {
+    padding: 6rem 2rem;
+    background: #ffffff;
     text-align: center;
 }
 
-.item img {
+.gallery h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card img {
     width: 100%;
-    border-radius: 8px;
+    height: 250px;
+    object-fit: cover;
 }
 
-.item p {
-    margin-top: 8px;
-    color: #33691e;
-    font-weight: bold;
+.card:hover {
+    transform: scale(1.05);
 }
 
+.desc {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .desc {
+    opacity: 1;
+}
+
+/* Seções */
+.saude-unica, .quem-somos, .contato {
+    padding: 6rem 2rem;
+    background: #f7fafc;
+    text-align: center;
+}
+
+.saude-unica h2, .quem-somos h2, .contato h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Formulário de Contato */
 form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 form input, form textarea {
-    margin: 10px 0;
-    padding: 12px;
-    border: 1px solid #a5d6a7;
-    border-radius: 5px;
-    background-color: #f1f8e9;
-    color: #1b5e20;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
-form button {
-    width: 150px;
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
+form textarea {
+    resize: vertical;
 }
 
-footer {
-    background-color: #1b5e20;
+/* Footer */
+.footer {
+    background: #1b5e20;
     color: white;
     text-align: center;
-    padding: 15px;
-    font-size: 14px;
+    padding: 2rem 1rem;
 }
 
-.saude h2 {
-    color: #1b5e20;
-    margin: 20px 0 10px;
+.social a {
+    color: #a5d6a7;
+    margin: 0 0.5rem;
+    text-decoration: none;
 }
 
-.saude ul {
-    padding-left: 20px;
-    list-style-type: disc;
+.social a:hover {
+    text-decoration: underline;
 }
 
-.saude p.final {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #004d40;
-    text-align: center;
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.lightbox p {
+    color: white;
+    font-size: 1.2rem;
 }
