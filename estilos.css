@@ -1,45 +1,141 @@
-/* Estilo para os mapas mentais */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Fundo geral */
+body {
+  background: linear-gradient(to bottom, #2e7d32, #a5d6a7);
+  color: #333;
+}
+
+/* Cabeçalho */
+.header {
+  background: #1b5e20;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-btn {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav.hidden {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  padding-top: 1rem;
+}
+
+nav ul li {
+  margin: 0.5rem 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Botão Topo */
+#btnTopo {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#btnTopo:hover {
+  background-color: #1b5e20;
+}
+
+/* Seção principal */
+.card-section {
+  max-width: 900px;
+  margin: 6rem auto;
+  background: #f1f8e9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  line-height: 1.6;
+}
+
+/* Botões */
+.btn {
+  background: #2e7d32;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem 0;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+}
+
+/* Mapas mentais */
 .mapas-mentais {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 2rem;
+  align-items: center;
 }
 
 .mapa-bloco {
-    text-align: center;
-    max-width: 900px;
-    width: 100%;
-    padding: 20px;
-    background-color: #f1f8e9;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 .mapa-img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    margin-bottom: 10px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .mapa-legenda {
-    font-weight: bold;
-    color: #1b5e20;
-    font-size: 1.1rem;
-    margin-top: 8px;
+  font-weight: bold;
+  color: #1b5e20;
 }
 
-/* Espaçamento entre botões e textos */
-.card-section a.btn,
-.card-section ul li {
-    margin-top: 20px;
-    display: block;
+/* Rodapé */
+.footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
-.card-section p,
-.card-section ul {
-    margin-bottom: 20px;
-    line-height: 1.6;
+.footer .social a {
+  color: #a5d6a7;
+  text-decoration: none;
+  margin: 0 0.5rem;
 }
