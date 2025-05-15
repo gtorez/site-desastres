@@ -13,10 +13,10 @@
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
   <nav id="menu" class="hidden">
     <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#saude">Saúde Única</a></li>
-      <li><a href="#quem-somos">Quem Somos</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="saude.html">Saúde Única</a></li>
+      <li><a href="quem-somos.html">Quem Somos</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>
@@ -29,38 +29,25 @@
     <h1 id="typing-text"></h1>
   </div>
   <p>Conheça os impactos, saiba como agir e proteger o futuro do nosso planeta.</p>
-  <a href="#galeria" class="btn pulse">Explorar</a>
+  <a href="galeria.html" class="btn pulse">Explorar</a>
 </section>
 
-<section id="galeria" class="gallery">
-  <h2>Galeria de Desastres</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="brumadinho.jpg" alt="Brumadinho" onclick="openLightbox(this.src, 'Brumadinho - Tragédia de 2019')" />
-      <div class="desc">
-        <h3>Brumadinho</h3>
-        <p>O rompimento da barragem devastou vidas e comprometeu o ecossistema da região.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="amazonia.jpg" alt="Queimadas na Amazônia" onclick="openLightbox(this.src, 'Queimadas - Crise ambiental')" />
-      <div class="desc">
-        <h3>Queimadas na Amazônia</h3>
-        <p>As queimadas aceleram a destruição da maior floresta tropical do mundo.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="oleo.jpg" alt="Vazamento de Óleo" onclick="openLightbox(this.src, 'Vazamento de Óleo - Danos marinhos')" />
-      <div class="desc">
-        <h3>Vazamento de Óleo</h3>
-        <p>O desastre de óleo no litoral brasileiro impactou praias, fauna e comunidades pesqueiras.</p>
-      </div>
-    </div>
+<section id="contato" class="contato">
+  <h2>Fale Conosco</h2>
+  <form>
+    <input type="text" placeholder="Seu nome" required />
+    <input type="email" placeholder="Seu e-mail" required />
+    <textarea placeholder="Sua mensagem" required></textarea>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Impacto Terra. Todos os direitos reservados.</p>
+  <div class="social">
+    <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a>
   </div>
-</section>
+</footer>
 
-<section id="saude" class="saude-unica">
-  <h2>Saúde Única</h2>
-  <div class="card-section">
-    <p>
-      Saúde Única reconhece que a saúde dos seres humanos está interligada à saúde animal e ambiental. Um dese
+</body>
+</html>
