@@ -1,85 +1,266 @@
-/* Reset e estilo global */
+/* Reset geral */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Fundo geral do site */
+/* Corpo do site */
 body {
-  background: linear-gradient(to bottom, #2e7d32, #a5d6a7);
-  color: #333;
-  padding-top: 70px; /* Espaço para o cabeçalho fixo */
+    background: linear-gradient(to bottom, #2e7d32, #a5d6a7);
+    color: #333;
 }
 
-/* Cabeçalho fixo com navegação */
+/* Cabeçalho */
 .header {
-  background: #1b5e20;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    background: #1b5e20;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-nav button {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  margin-left: 15px;
-  cursor: pointer;
+.menu-btn {
+    font-size: 2rem;
+    cursor: pointer;
 }
 
-/* Seção de destaque inicial */
+nav.hidden {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
 .hero {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  border-radius: 12px;
-  text-align: center;
+    height: 100vh;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
 }
 
 .typing-container {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
-/* Seção de conteúdo explicativo */
-.saude-unica {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #f1f8e9;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  line-height: 1.6;
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #cfd8dc;
 }
 
-.saude-unica h2, .saude-unica h3 {
-  color: #1b5e20;
-  margin-top: 1.5rem;
+.btn {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: #43a047;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.4s, transform 0.4s;
 }
 
-.saude-unica ul, .saude-unica ol {
-  margin: 0.5rem 0 1.5rem 1.5rem;
+.btn:hover {
+    background: #388e3c;
+    transform: scale(1.05);
 }
 
-/* Rodapé */
+/* Botão pulsante */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Botão Voltar ao Topo */
+#btnTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #43a047;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#btnTopo:hover {
+    background-color: #388e3c;
+}
+
+/* Galeria */
+.gallery {
+    padding: 6rem 2rem;
+    background: #ffffff;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.desc {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .desc {
+    opacity: 1;
+}
+
+/* Seções Saúde Única e Quem Somos */
+.saude-unica, .quem-somos, .contato {
+    padding: 6rem 2rem;
+    background: #f7fafc;
+    text-align: center;
+}
+
+.saude-unica h2, .quem-somos h2, .contato h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* Footer */
 .footer {
-  background: #1b5e20;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.social a {
+    color: #a5d6a7;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.lightbox p {
+    color: white;
+    font-size: 1.2rem;
 }
