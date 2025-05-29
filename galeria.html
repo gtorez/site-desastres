@@ -1,83 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria - Impacto Terra</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria - Impacto Terra</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
 <header class="header">
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <nav id="menu" class="hidden">
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="galeria.html" target="_blank">Galeria</a></li>
-            <li><a href="saude.html" target="_blank">Saúde Única</a></li>
-            <li><a href="quem-somos.html" target="_blank">Quem Somos</a></li>
-        </ul>
-    </nav>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <nav id="menu" class="hidden">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="galeria.html" target="_blank">Galeria</a></li>
+      <li><a href="saude.html" target="_blank">Saúde Única</a></li>
+      <li><a href="quem-somos.html" target="_blank">Quem Somos</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- Botão Voltar ao Topo -->
 <button onclick="topFunction()" id="btnTopo" title="Voltar ao topo">↑</button>
 
-<!-- Seção de Conscientização -->
 <section class="conteudo">
+  <div class="card-section">
     <h2>Como Agir Diante dos Desastres Ambientais</h2>
     <p>As imagens abaixo mostram tragédias reais que abalaram nosso país e o meio ambiente. Mais do que observar, é preciso refletir e agir.</p>
-    <ul>
-        <li><strong>Denuncie:</strong> qualquer atividade ilegal como desmatamento, queimada ou descarte de resíduos.</li>
-        <li><strong>Informe-se:</strong> acompanhe fontes confiáveis sobre alertas de risco em sua região.</li>
-        <li><strong>Participe:</strong> de projetos ambientais e campanhas de recuperação de áreas degradadas.</li>
-        <li><strong>Eduque:</strong> compartilhe informações e incentive sua comunidade a cuidar do meio ambiente.</li>
-        <li><strong>Evacue com segurança:</strong> em caso de emergência, siga orientações da Defesa Civil e abrigue-se em locais seguros.</li>
-    </ul>
-    <p>Conscientizar é o primeiro passo. Agir é o que transforma.</p>
+  </div>
 </section>
 
-<!-- Galeria de Imagens -->
-<section id="galeria" class="gallery">
-    <h2>Galeria de Desastres</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="brumadinho.jpg" alt="Brumadinho" onclick="openLightbox(this.src, 'Brumadinho - Tragédia de 2019')">
-            <div class="desc">
-                <h3>Brumadinho</h3>
-                <p>O rompimento da barragem devastou vidas e ecossistemas em Minas Gerais.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="amazonia.jpg" alt="Queimadas na Amazônia" onclick="openLightbox(this.src, 'Queimadas - Crise ambiental')">
-            <div class="desc">
-                <h3>Queimadas na Amazônia</h3>
-                <p>As queimadas ameaçam a biodiversidade e contribuem para o aquecimento global.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="oleo.jpg" alt="Vazamento de Óleo" onclick="openLightbox(this.src, 'Vazamento de Óleo - Danos marinhos')">
-            <div class="desc">
-                <h3>Vazamento de Óleo</h3>
-                <p>Desastre ambiental que afetou gravemente a vida marinha e comunidades litorâneas.</p>
-            </div>
-        </div>
+<section class="gallery">
+  <h2>Galeria de Desastres</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="brumadinho.jpg" alt="Brumadinho" />
+      <div class="desc">
+        <h3>Brumadinho</h3>
+        <p>O rompimento da barragem devastou vidas e ecossistemas em Minas Gerais.</p>
+      </div>
     </div>
+    <div class="card">
+      <img src="amazonia.jpg" alt="Amazônia" />
+      <div class="desc">
+        <h3>Queimadas na Amazônia</h3>
+        <p>Destruição florestal e impacto na biodiversidade.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="oleo.jpg" alt="Vazamento de óleo" />
+      <div class="desc">
+        <h3>Vazamento de Óleo</h3>
+        <p>Impacto devastador na fauna marinha.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Rodapé -->
 <footer class="footer">
-    <p>© 2025 Impacto Terra. Todos os direitos reservados.</p>
+  <p>© 2025 Impacto Terra. Todos os direitos reservados.</p>
 </footer>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
-    <p id="lightbox-caption"></p>
-</div>
-
-<!-- Script -->
-<script src="script.js"></script>
 
 </body>
 </html>
