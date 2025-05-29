@@ -94,17 +94,6 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* Botão pulsante */
-.pulse {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
 /* Botão Voltar ao Topo */
 #btnTopo {
     display: none;
@@ -126,136 +115,38 @@ nav ul li a {
     background-color: #388e3c;
 }
 
-/* Galeria */
-.gallery {
-    padding: 6rem 2rem;
-    background: #ffffff;
-    text-align: center;
-}
-
-.gallery h2 {
-    margin-bottom: 2rem;
-    font-size: 2.2rem;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.desc {
-    background: rgba(0,0,0,0.7);
-    color: white;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.card:hover .desc {
-    opacity: 1;
-}
-
-/* Seções com fundo branco (Saúde Única, Quem Somos etc.) */
+/* Seções de conteúdo com card branco centralizado */
 .conteudo, .saude-unica, .quem-somos, .contato {
     padding: 6rem 2rem;
     display: flex;
     justify-content: center;
-    background-color: #f0f4f5;
+    background-color: transparent;
 }
 
-/* Card branco para centralizar conteúdo */
 .card-section {
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    padding: 2.5rem 2rem;
-    max-width: 850px;
+    max-width: 900px;
     width: 100%;
-    text-align: center;
-}
-
-.card-section h2 {
-    font-size: 2.2rem;
-    color: #1b5e20;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-}
-
-.card-section h3 {
-    font-size: 1.4rem;
-    color: #2e7d32;
-    margin-top: 2rem;
-    font-weight: 600;
-}
-
-.card-section p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.8;
-    margin-top: 1rem;
-    text-align: justify;
-}
-
-/* Listas */
-.card-section ul, .card-section ol {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     text-align: left;
-    max-width: 800px;
-    margin: 1.5rem auto;
-    padding-left: 1.5rem;
-    font-size: 1.05rem;
-    line-height: 1.6;
 }
 
-.card-section li {
-    margin-bottom: 0.7rem;
-}
-
-.card-section strong {
+.card-section h2, .card-section h3 {
     color: #1b5e20;
-    font-weight: bold;
+    margin-top: 1.5rem;
 }
 
-/* Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
+.card-section p, .card-section ul, .card-section ol {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #222;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}
-
-form textarea {
-    resize: vertical;
+.card-section ul, .card-section ol {
+    padding-left: 1.5rem;
 }
 
 /* Footer */
@@ -274,65 +165,4 @@ form textarea {
 
 .social a:hover {
     text-decoration: underline;
-}
-
-/* Lightbox */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.lightbox img {
-    max-width: 80%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.lightbox p {
-    color: white;
-    font-size: 1.2rem;
-}
-
-/* Participantes */
-.participantes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.participantes-grid img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.participantes-grid img:hover {
-    transform: scale(1.03);
-}
-
-.participantes-grid p {
-    text-align: center;
-    margin-top: 0.5rem;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #222;
-}
-
-.participantes-grid .curso {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: normal;
-    color: #555;
-    margin-top: 0.2rem;
 }
