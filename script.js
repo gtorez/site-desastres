@@ -53,12 +53,12 @@ function digitar() {
     if (typingText) {
       typingText.innerHTML += texto.charAt(index);
       index++;
-      setTimeout(digitar, 80);
+      setTimeout(digitar, 70);
     }
   }
 }
 
-// INICIAR SÓ SE TIVER TÍTULO COM ID "typing-text"
+// INICIAR SOMENTE SE O TÍTULO ESTIVER PRESENTE
 window.onload = function () {
   const typingText = document.getElementById("typing-text");
   if (typingText) {
