@@ -1,87 +1,100 @@
-/* Reset básico */
+/* Reset geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
+/* Corpo */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #2e7d32, #a5d6a7);
     color: #333;
 }
 
 /* Cabeçalho */
 .header {
-    background-color: #1b4f72;
-    color: #fff;
+    background: #1b5e20;
+    color: white;
     padding: 1rem;
-    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
 }
 
-.header nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.header nav ul li a:hover {
-    text-decoration: underline;
-}
-
 .menu-btn {
-    display: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
-.hidden {
+nav.hidden {
     display: none;
 }
 
-/* Hero / Introdução */
-.hero {
-    background: linear-gradient(to bottom, #aed6f1, #f4f4f4);
-    padding: 4rem 2rem;
-    text-align: center;
+nav ul {
+    list-style: none;
+    margin-top: 1rem;
 }
 
-.typing-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #154360;
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.typing-container {
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #cfd8dc;
 }
 
 .btn {
-    background-color: #117864;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: #43a047;
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 50px;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.4s, transform 0.4s;
 }
 
 .btn:hover {
-    background-color: #0b5345;
+    background: #388e3c;
+    transform: scale(1.05);
 }
 
+/* Botão pulsante */
 .pulse {
     animation: pulse 2s infinite;
 }
@@ -92,122 +105,232 @@ body {
     100% { transform: scale(1); }
 }
 
-/* Conteúdo */
-.conteudo {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.conteudo h2, .conteudo h3 {
-    color: #196f3d;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.conteudo p, .conteudo li {
-    margin-bottom: 1rem;
-}
-
-/* Lista formatada */
-ul, ol {
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Participantes */
-.participantes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.participantes div {
-    text-align: center;
-}
-
-.participantes img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.participantes p {
-    margin-top: 0.5rem;
-    font-weight: bold;
-}
-
-/* Rodapé */
-.footer {
-    background-color: #1b4f72;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
 /* Botão Voltar ao Topo */
 #btnTopo {
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #117864;
-    color: white;
+    z-index: 99;
+    font-size: 18px;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    outline: none;
+    background-color: #43a047;
+    color: white;
     cursor: pointer;
-    display: none;
+    padding: 15px;
+    border-radius: 50%;
 }
 
 #btnTopo:hover {
-    background-color: #0b5345;
+    background-color: #388e3c;
 }
 
 /* Galeria */
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem;
+.gallery {
+    padding: 6rem 2rem;
+    background: #ffffff;
+    text-align: center;
 }
 
-.galeria img {
+.gallery h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card img {
     width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.desc {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .desc {
+    opacity: 1;
+}
+
+/* Seções de conteúdo */
+.conteudo, .saude-unica, .quem-somos, .contato {
+    background-color: #f9fbfc;
+    color: #222;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.conteudo h2, .saude-unica h2,
+.quem-somos h2, .contato h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1b5e20;
+    font-weight: 700;
+}
+
+.conteudo h3, .saude-unica h3 {
+    font-size: 1.4rem;
+    color: #2e7d32;
+    margin-top: 2rem;
+}
+
+.conteudo p, .saude-unica p,
+.quem-somos p, .contato p {
+    max-width: 800px;
+    margin: 1.2rem auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.conteudo ul, .saude-unica ul {
+    text-align: left;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding-left: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.conteudo li, .saude-unica li {
+    margin-bottom: 0.7rem;
+}
+
+.conteudo strong, .saude-unica strong {
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+/* Card centralizado */
+.card-section {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Formulário */
-.contato form {
+form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.contato input, .contato textarea {
-    padding: 0.75rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+form input, form textarea {
     width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
-.contato button {
-    background-color: #117864;
+form textarea {
+    resize: vertical;
+}
+
+/* Footer */
+.footer {
+    background: #1b5e20;
     color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
-.contato button:hover {
-    background-color: #0b5345;
+.social a {
+    color: #a5d6a7;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.lightbox p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Participantes */
+.participantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.participantes-grid img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.participantes-grid img:hover {
+    transform: scale(1.03);
+}
+
+.participantes-grid p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #222;
+}
+
+.participantes-grid .curso {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #555;
+    margin-top: 0.2rem;
 }
