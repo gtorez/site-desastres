@@ -1,150 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impacto Terra</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impacto Terra</title>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
 <header class="header">
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <nav id="menu" class="hidden">
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="galeria.html" target="_blank">Galeria</a></li>
-            <li><a href="saude.html" target="_blank">Saúde Única</a></li>
-            <li><a href="quem-somos.html" target="_blank">Quem Somos</a></li>
-        </ul>
-    </nav>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <nav id="menu" class="hidden">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="galeria.html" target="_blank">Galeria</a></li>
+      <li><a href="saude.html" target="_blank">Saúde Única</a></li>
+      <li><a href="quem-somos.html" target="_blank">Quem Somos</a></li>
+    </ul>
+  </nav>
 </header>
 
+<!-- Botão Voltar ao Topo -->
 <button onclick="topFunction()" id="btnTopo" title="Voltar ao topo">↑</button>
 
 <section id="inicio" class="hero">
-    <div class="typing-container">
-        <h1 id="typing-text"></h1>
-    </div>
-    <p>Conheça os impactos, saiba como agir e proteger o futuro do nosso planeta.</p>
-    <a href="galeria.html" target="_blank" class="btn pulse">Explorar</a>
+  <div class="typing-container">
+    <h1 id="typing-text"></h1>
+  </div>
+  <p>Conheça os impactos, saiba como agir e proteger o futuro do nosso planeta.</p>
+  <a href="galeria.html" target="_blank" class="btn pulse">Explorar</a>
 </section>
 
 <section id="conteudo-completo" class="conteudo">
-    <h2>O que é Saúde Única</h2>
-    <p>Saúde única é a tradução do termo em inglês “One health", que reconhece a interdependência entre a saúde humana, animal e ambiental.</p>
+  <h2>O que é Saúde Única</h2>
+  <p>Saúde única é a tradução do termo em inglês “One health”, que reconhece a interdependência entre a saúde humana, animal e ambiental. Essa abordagem propõe cooperação entre diferentes setores para promover saúde ampla e efetiva.</p>
 
-    <img src="Gráfico1.JPG" alt="Gráfico Saúde Única">
+  <img src="Gráfico1.JPG" alt="Gráfico 1 - Saúde Única" class="grafico-img"/>
 
-    <p>Essa abordagem propõe cooperação, colaboração e coordenação entre diferentes profissões para promover saúde de maneira abrangente. Como destaca Silva et al. (2024), é essencial considerar aspectos sociais e ambientais.</p>
+  <h2>Desastres Ambientais</h2>
+  <p>Eventos como enchentes, terremotos ou desmatamentos que impactam a sociedade, meio ambiente e economia.</p>
 
-    <h2>O que são desastres ambientais e quais os seus impactos</h2>
-    <p>Desastres ambientais são eventos causados por fenômenos naturais ou ações humanas que resultam em danos significativos ao meio ambiente, à sociedade e à economia.</p>
+  <h3>Exemplos Naturais:</h3>
+  <ul>
+    <li>Enchentes</li>
+    <li>Terremotos</li>
+    <li>Secas</li>
+  </ul>
 
-    <img src="Gráfico2.JPG" alt="Gráfico Desastres e Impactos">
+  <img src="Gráfico2.JPG" alt="Gráfico 2 - Exemplos Naturais" class="grafico-img"/>
 
-    <h3>1. Naturais:</h3>
-    <ul>
-        <li>Enchentes</li>
-        <li>Terremotos</li>
-        <li>Tsunamis</li>
-        <li>Furacões</li>
-        <li>Erupções vulcânicas</li>
-        <li>Secas</li>
-    </ul>
+  <h3>Exemplos Humanos:</h3>
+  <ul>
+    <li>Rompimento de barragens</li>
+    <li>Poluição</li>
+    <li>Queimadas</li>
+  </ul>
 
-    <h3>2. Humanos (tecnológicos ou antrópicos):</h3>
-    <ul>
-        <li>Rompimento de barragens</li>
-        <li>Vazamentos de petróleo</li>
-        <li>Desmatamento descontrolado</li>
-        <li>Poluição do ar, solo ou água</li>
-        <li>Incêndios florestais provocados</li>
-    </ul>
+  <img src="Gráfico3.JPG" alt="Gráfico 3 - Exemplos Humanos" class="grafico-img"/>
 
-    <h3>Impactos:</h3>
-    <strong>Ambientais:</strong>
-    <ul>
-        <li>Destruição de ecossistemas</li>
-        <li>Morte de animais e plantas</li>
-        <li>Poluição de rios, solos e atmosfera</li>
-        <li>Perda da biodiversidade</li>
-    </ul>
+  <h3>Impactos:</h3>
+  <ul>
+    <li>Perda de biodiversidade</li>
+    <li>Doenças</li>
+    <li>Danos econômicos</li>
+  </ul>
 
-    <strong>Sociais:</strong>
-    <ul>
-        <li>Perda de vidas humanas</li>
-        <li>Deslocamento de populações</li>
-        <li>Problemas de saúde pública</li>
-        <li>Interrupção de serviços essenciais</li>
-    </ul>
+  <img src="Gráfico4.JPG" alt="Gráfico 4 - Impactos" class="grafico-img"/>
 
-    <strong>Econômicos:</strong>
-    <ul>
-        <li>Danos à infraestrutura</li>
-        <li>Prejuízos à agricultura e pecuária</li>
-        <li>Gastos elevados com reconstrução</li>
-        <li>Redução no desenvolvimento econômico</li>
-    </ul>
+  <h2>Saúde Única e Desastres</h2>
+  <p>Desastres afetam a saúde humana, animal e o meio ambiente. A abordagem de Saúde Única recomenda:</p>
+  <ol>
+    <li><strong>Planejamento Integrado</strong></li>
+    <li><strong>Vigilância Conjunta</strong></li>
+    <li><strong>Educação e Conscientização</strong></li>
+    <li><strong>Resposta Multissetorial</strong></li>
+    <li><strong>Reconstrução Sustentável</strong></li>
+  </ol>
 
-    <img src="Gráfico3.JPG" alt="Gráfico de Doenças e Danos Sociais">
+  <img src="Gráfico5.JPG" alt="Gráfico 5 - Recomendações da Saúde Única" class="grafico-img"/>
 
-    <h2>Saúde Única e Desastres Ambientais</h2>
-    <p>Desastres como inundações e vazamentos químicos afetam tanto o meio ambiente quanto a saúde humana e animal.</p>
+  <h2>Impactos no Brasil (2013–2023)</h2>
+  <p>Derramamentos de óleo, enchentes e queimadas afetam ecossistemas e exigem resposta rápida, integrada e baseada em evidências.</p>
 
-    <h3>Recomendações da Saúde Única:</h3>
-    <ol>
-        <li><strong>Planejamento Integrado</strong></li>
-        <li><strong>Vigilância Conjunta</strong></li>
-        <li><strong>Educação e Conscientização</strong></li>
-        <li><strong>Resposta Multissetorial</strong></li>
-        <li><strong>Reconstrução Sustentável</strong></li>
-    </ol>
+  <h2>Determinantes sociais e desigualdade</h2>
+  <p>Populações vulneráveis são as mais afetadas. A exposição está ligada à moradia precária, raça, renda, gênero e acesso a serviços básicos.</p>
 
-    <h2>Impactos no Brasil (2013–2023)</h2>
-    <p>O Brasil enfrenta tragédias como derramamento de óleo, enchentes no Sul e queimadas na Amazônia e Pantanal.</p>
-
-    <img src="Gráfico4.JPG" alt="Gráfico de Impactos no Brasil">
-
-    <h2>Determinantes sociais e desigualdade</h2>
-    <p>Desastres atingem com mais força as populações vulneráveis. Moradias precárias e falta de infraestrutura são agravantes.</p>
-
-    <h2>Principais causas dos desastres ambientais no Brasil</h2>
-    <p>Urbanização desordenada, desmatamento e mudanças climáticas são os principais fatores.</p>
-
-    <h3>Tipos comuns de desastres no Brasil:</h3>
-    <ul>
-        <li><strong>Seca e estiagem</strong>: mudanças climáticas e agronegócio</li>
-        <li><strong>Enchentes</strong>: chuvas intensas e má infraestrutura</li>
-        <li><strong>Doenças infecciosas</strong>: falta de saneamento</li>
-        <li><strong>Incêndios</strong>: queimadas ilegais e clima seco</li>
-    </ul>
-
-    <img src="Gráfico5.JPG" alt="Gráfico de Causas e Efeitos">
-
-    <p>É essencial integrar ações entre saúde humana, ambiental e animal para combater os efeitos desses desastres.</p>
+  <h2>Causas dos desastres no Brasil</h2>
+  <ul>
+    <li><strong>Seca e estiagem</strong>: mudanças climáticas e agronegócio</li>
+    <li><strong>Enchentes</strong>: chuvas intensas e má infraestrutura</li>
+    <li><strong>Doenças infecciosas</strong>: falta de saneamento</li>
+    <li><strong>Incêndios</strong>: queimadas ilegais e clima seco</li>
+  </ul>
 </section>
 
 <section id="contato" class="contato">
-    <h2>Fale Conosco</h2>
-    <form>
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu e-mail" required>
-        <textarea placeholder="Sua mensagem" required></textarea>
-        <button type="submit" class="btn">Enviar</button>
-    </form>
+  <h2>Fale Conosco</h2>
+  <form>
+    <input type="text" placeholder="Seu nome" required />
+    <input type="email" placeholder="Seu e-mail" required />
+    <textarea placeholder="Sua mensagem" required></textarea>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
 </section>
 
 <footer class="footer">
-    <p>© 2025 Impacto Terra. Todos os direitos reservados.</p>
-    <div class="social">
-        <a href="#">Instagram</a> |
-        <a href="#">Facebook</a> |
-        <a href="#">LinkedIn</a>
-    </div>
+  <p>© 2025 Impacto Terra. Todos os direitos reservados.</p>
+  <div class="social">
+    <a href="#">Instagram</a> | 
+    <a href="#">Facebook</a> | 
+    <a href="#">LinkedIn</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
