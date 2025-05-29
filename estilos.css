@@ -9,14 +9,14 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #333;
     scroll-behavior: smooth;
 }
 
 /* Cabeçalho com menu */
 .header {
-    background-color: #003366;
+    background-color: #2e7d32; /* Verde escuro */
     padding: 1rem;
     color: white;
     position: sticky;
@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #0055aa;
+    background-color: #43a047; /* Verde mais claro no hover */
 }
 
 .hidden {
@@ -62,7 +62,7 @@ nav ul li a:hover {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #003366;
+    background-color: #2e7d32;
     color: white;
     cursor: pointer;
     padding: 10px 15px;
@@ -74,7 +74,7 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, #0077cc, #003366);
+    background: linear-gradient(135deg, #81c784, #388e3c); /* tons de verde */
     color: white;
 }
 
@@ -87,7 +87,7 @@ nav ul li a:hover {
     display: inline-block;
     padding: 0.6rem 1.2rem;
     background-color: white;
-    color: #003366;
+    color: #2e7d32;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 1rem;
@@ -96,7 +96,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #eee;
+    background-color: #e0f2f1;
 }
 
 .pulse {
@@ -117,50 +117,8 @@ nav ul li a:hover {
 }
 
 .conteudo h2, .conteudo h3 {
-    color: #003366;
+    color: #2e7d32;
     margin-top: 2rem;
 }
 
-.conteudo ul, .conteudo ol {
-    margin-left: 2rem;
-    margin-top: 1rem;
-}
-
-/* Contato */
-.contato {
-    background-color: #f0f0f0;
-    padding: 2rem;
-}
-
-.contato form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: auto;
-}
-
-.contato input, .contato textarea {
-    margin: 0.5rem 0;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.contato button {
-    margin-top: 1rem;
-}
-
-/* Rodapé */
-.footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #003366;
-    color: white;
-}
-
-.footer .social a {
-    color: white;
-    margin: 0 0.5rem;
-    text-decoration: none;
-}
+.conteudo ul, .conteudo
