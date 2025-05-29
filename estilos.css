@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset e estilo global */
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +7,14 @@
   scroll-behavior: smooth;
 }
 
-/* Fundo geral */
+/* Fundo geral do site */
 body {
   background: linear-gradient(to bottom, #2e7d32, #a5d6a7);
   color: #333;
-  padding-top: 70px; /* espaço para header fixo */
+  padding-top: 70px; /* Espaço para o cabeçalho fixo */
 }
 
-/* Cabeçalho */
+/* Cabeçalho fixo com navegação */
 .header {
   background: #1b5e20;
   color: white;
@@ -30,208 +30,50 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
-.menu-btn {
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-nav.hidden {
-  display: none;
-}
-
-nav ul {
-  list-style: none;
-  padding-top: 1rem;
-}
-
-nav ul li {
-  margin: 0.5rem 0;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-/* Botão Voltar ao Topo */
-#btnTopo {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 18px;
-  background-color: #43a047;
-  color: white;
+nav button {
+  background: transparent;
   border: none;
-  padding: 15px;
-  border-radius: 50%;
+  color: white;
+  font-size: 1rem;
+  margin-left: 15px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
 }
 
-#btnTopo:hover {
-  background-color: #1b5e20;
-}
-
-/* Seções principais */
-.hero, .gallery, .saude-unica, .quem-somos, .contato {
-  max-width: 900px;
-  margin: 2rem auto 4rem auto;
-  padding: 1rem 2rem;
-  background: #f1f8e9;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-  line-height: 1.6;
-}
-
-/* Hero section */
+/* Seção de destaque inicial */
 .hero {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
-  padding: 3rem 2rem;
   border-radius: 12px;
+  text-align: center;
 }
 
 .typing-container {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  margin-bottom: 1rem;
 }
 
-/* Botões */
-.btn {
-  background: #2e7d32;
-  color: white;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 1.5rem 0;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  border: none;
+/* Seção de conteúdo explicativo */
+.saude-unica {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f1f8e9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  line-height: 1.6;
 }
 
-.btn:hover {
-  background: #1b5e20;
-  transform: scale(1.05);
-}
-
-/* Botão pulsante */
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-/* Galeria */
-.gallery h2 {
-  margin-bottom: 2rem;
-  font-size: 2.2rem;
+.saude-unica h2, .saude-unica h3 {
   color: #1b5e20;
+  margin-top: 1.5rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  background: white;
-}
-
-.card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-bottom: 1px solid #ddd;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.desc {
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  text-align: left;
-}
-
-.card:hover .desc {
-  opacity: 1;
-}
-
-/* Mapas mentais */
-.mapas-mentais {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 2rem;
-  align-items: center;
-}
-
-.mapa-bloco {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 100%;
-  max-width: 800px;
-}
-
-.mapa-img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.mapa-legenda {
-  font-weight: bold;
-  color: #1b5e20;
-}
-
-/* Formulário Contato */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-form textarea {
-  resize: vertical;
+.saude-unica ul, .saude-unica ol {
+  margin: 0.5rem 0 1.5rem 1.5rem;
 }
 
 /* Rodapé */
@@ -240,40 +82,4 @@ form textarea {
   color: white;
   text-align: center;
   padding: 2rem 1rem;
-}
-
-.footer .social a {
-  color: #a5d6a7;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.footer .social a:hover {
-  text-decoration: underline;
-}
-
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.lightbox img {
-  max-width: 80%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.lightbox p {
-  color: white;
-  font-size: 1.2rem;
 }
