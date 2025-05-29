@@ -9,14 +9,14 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #333;
     scroll-behavior: smooth;
 }
 
 /* Cabeçalho com menu */
 .header {
-    background-color: #003366;
+    background-color: #2e7d32; /* VERDE */
     padding: 1rem;
     color: white;
     position: sticky;
@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #0055aa;
+    background-color: #388e3c; /* tom mais escuro do verde */
 }
 
 .hidden {
@@ -62,7 +62,7 @@ nav ul li a:hover {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #003366;
+    background-color: #2e7d32;
     color: white;
     cursor: pointer;
     padding: 10px 15px;
@@ -74,8 +74,8 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, #0077cc, #003366);
-    color: white;
+    background-color: #a5d6a7; /* verde claro */
+    color: #1b5e20;
 }
 
 .typing-container h1 {
@@ -86,8 +86,8 @@ nav ul li a:hover {
 .btn {
     display: inline-block;
     padding: 0.6rem 1.2rem;
-    background-color: white;
-    color: #003366;
+    background-color: #2e7d32;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 1rem;
@@ -96,7 +96,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #eee;
+    background-color: #1b5e20;
 }
 
 .pulse {
@@ -114,10 +114,11 @@ nav ul li a:hover {
     padding: 2rem;
     max-width: 900px;
     margin: auto;
+    background-color: #f9f9f9;
 }
 
 .conteudo h2, .conteudo h3 {
-    color: #003366;
+    color: #2e7d32;
     margin-top: 2rem;
 }
 
@@ -128,7 +129,7 @@ nav ul li a:hover {
 
 /* Contato */
 .contato {
-    background-color: #f0f0f0;
+    background-color: #e8f5e9;
     padding: 2rem;
 }
 
@@ -149,13 +150,23 @@ nav ul li a:hover {
 
 .contato button {
     margin-top: 1rem;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contato button:hover {
+    background-color: #1b5e20;
 }
 
 /* Rodapé */
 .footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: #003366;
+    background-color: #2e7d32;
     color: white;
 }
 
