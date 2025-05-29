@@ -178,7 +178,7 @@ nav ul li a {
     opacity: 1;
 }
 
-/* Seções de conteúdo */
+/* Seções claras e conteúdo */
 .conteudo, .saude-unica, .quem-somos, .contato {
     background-color: #f9fbfc;
     color: #222;
@@ -226,7 +226,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Card centralizado */
+/* Card de conteúdo */
 .card-section {
     max-width: 900px;
     margin: 0 auto;
@@ -234,6 +234,18 @@ nav ul li a {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Participantes */
+.quem-somos img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.quem-somos img:hover {
+    transform: scale(1.03);
 }
 
 /* Formulário */
@@ -298,39 +310,4 @@ form textarea {
 .lightbox p {
     color: white;
     font-size: 1.2rem;
-}
-
-/* Participantes */
-.participantes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.participantes-grid img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.participantes-grid img:hover {
-    transform: scale(1.03);
-}
-
-.participantes-grid p {
-    text-align: center;
-    margin-top: 0.5rem;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #222;
-}
-
-.participantes-grid .curso {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: normal;
-    color: #555;
-    margin-top: 0.2rem;
 }
