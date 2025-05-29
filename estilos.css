@@ -5,209 +5,200 @@
     box-sizing: border-box;
 }
 
+/* Estilização geral */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f4f7fa;
     color: #333;
+    padding-bottom: 80px;
 }
 
 /* Cabeçalho */
 .header {
-    background-color: #1b4f72;
-    color: #fff;
-    padding: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.header nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.header nav ul li a:hover {
-    text-decoration: underline;
-}
-
 .menu-btn {
-    display: none;
     font-size: 1.5rem;
     cursor: pointer;
-}
-
-.hidden {
     display: none;
 }
 
-/* Hero / Introdução */
-.hero {
-    background: linear-gradient(to bottom, #aed6f1, #f4f4f4);
-    padding: 4rem 2rem;
-    text-align: center;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
 }
 
-.typing-container h1 {
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: #ffffff;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+    }
+
+    #menu.hidden {
+        display: none;
+    }
+}
+
+/* Seções */
+.hero {
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #154360;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .btn {
-    background-color: #117864;
+    background-color: #0077cc;
     color: white;
+    padding: 0.7rem 1.5rem;
     border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 25px;
     text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0b5345;
+    background-color: #005fa3;
 }
 
-.pulse {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+/* Botão voltar ao topo */
+#btnTopo {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: none;
+    z-index: 1000;
 }
 
 /* Conteúdo */
 .conteudo {
     padding: 2rem;
     max-width: 1000px;
-    margin: auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
 }
 
 .conteudo h2, .conteudo h3 {
-    color: #196f3d;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    color: #0077cc;
+    margin-top: 1.5rem;
 }
 
-.conteudo p, .conteudo li {
-    margin-bottom: 1rem;
-}
-
-/* Lista formatada */
-ul, ol {
+.conteudo ul, .conteudo ol {
     padding-left: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.conteudo strong {
+    color: #005fa3;
+}
+
+/* Imagens dentro do conteúdo */
+.conteudo img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Seção contato */
+.contato {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f0f4f8;
+    margin-top: 3rem;
+}
+
+.contato h2 {
+    color: #0077cc;
     margin-bottom: 1rem;
 }
 
-/* Participantes */
-.participantes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.participantes div {
-    text-align: center;
-}
-
-.participantes img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.participantes p {
-    margin-top: 0.5rem;
-    font-weight: bold;
-}
-
-/* Rodapé */
-.footer {
-    background-color: #1b4f72;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-/* Botão Voltar ao Topo */
-#btnTopo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #117864;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-}
-
-#btnTopo:hover {
-    background-color: #0b5345;
-}
-
-/* Galeria */
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem;
-}
-
-.galeria img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Formulário */
 .contato form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contato input, .contato textarea {
-    padding: 0.75rem;
-    border-radius: 5px;
+    padding: 0.8rem;
     border: 1px solid #ccc;
+    border-radius: 5px;
     width: 100%;
 }
 
-.contato button {
-    background-color: #117864;
+/* Rodapé */
+.footer {
+    background-color: #0077cc;
     color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
 }
 
-.contato button:hover {
-    background-color: #0b5345;
+.footer .social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    transition: text-decoration 0.3s;
+}
+
+.footer .social a:hover {
+    text-decoration: underline;
 }
