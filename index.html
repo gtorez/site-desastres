@@ -1,89 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Impacto Terra</title>
-  <link rel="stylesheet" href="estilos.css" />
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Terra</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-  <nav id="menu" class="hidden">
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="galeria.html">Galeria</a></li>
-      <li><a href="saude.html">Saúde Única</a></li>
-      <li><a href="quem-somos.html">Quem Somos</a></li>
-    </ul>
-  </nav>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="menu" class="hidden">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="galeria.html" target="_blank">Galeria</a></li>
+            <li><a href="saude.html" target="_blank">Saúde Única</a></li>
+            <li><a href="quem-somos.html" target="_blank">Quem Somos</a></li>
+        </ul>
+    </nav>
 </header>
 
+<!-- Botão Voltar ao Topo -->
 <button onclick="topFunction()" id="btnTopo" title="Voltar ao topo">↑</button>
 
-<main class="hero">
-  <h1 id="typing-text"></h1>
-</main>
+<section id="inicio" class="hero">
+    <div class="typing-container">
+        <h1 id="typing-text"></h1>
+    </div>
+    <p>Conheça os impactos, saiba como agir e proteger o futuro do nosso planeta.</p>
+    <a href="galeria.html" target="_blank" class="btn pulse">Explorar</a>
+</section>
 
-<section class="saude-unica">
-  <h2>Saúde Única — Desastres Ambientais</h2>
-
-  <h3>O que é Saúde Única</h3>
-  <p>Saúde única é a tradução do termo em inglês “One Health", que reconhece a interdependência entre a saúde humana, animal e ambiental. Essa abordagem propõe a cooperação, colaboração e coordenação entre diferentes profissões, disciplinas e setores para promover a saúde de forma abrangente e efetiva.</p>
-  <p>Colocar o conceito em prática requer reflexão crítica sobre as realidades sociais de cada país e a inclusão de diversos atores sociais. Como destaca Silva et al. (2024), “a aplicação da Saúde Única deve considerar aspectos históricos, sociais e ambientais, promovendo uma articulação intersetorial que envolva também populações vulnerabilizadas e seus territórios”.</p>
-
-  <h3>O que são desastres ambientais e seus impactos</h3>
-  <p>Desastres ambientais são eventos causados por fenômenos naturais ou ação humana que causam danos ao meio ambiente, sociedade e economia.</p>
-
-  <h4>1. Naturais:</h4>
-  <ul>
-    <li>Enchentes</li>
-    <li>Terremotos</li>
-    <li>Tsunamis</li>
-    <li>Furacões</li>
-    <li>Erupções vulcânicas</li>
-    <li>Secas</li>
-  </ul>
-
-  <h4>2. Humanos (tecnológicos ou antrópicos):</h4>
-  <ul>
-    <li>Rompimento de barragens</li>
-    <li>Vazamentos de petróleo</li>
-    <li>Desmatamento</li>
-    <li>Poluição do ar, solo ou água</li>
-    <li>Incêndios florestais provocados</li>
-  </ul>
-
-  <h4>Impactos ambientais:</h4>
-  <ul>
-    <li>Destruição de ecossistemas</li>
-    <li>Morte de animais e plantas</li>
-    <li>Poluição de rios, solos e atmosfera</li>
-    <li>Perda da biodiversidade</li>
-  </ul>
-
-  <h4>Impactos sociais:</h4>
-  <ul>
-    <li>Perda de vidas humanas</li>
-    <li>Refugiados ambientais</li>
-    <li>Problemas de saúde pública</li>
-    <li>Interrupção de serviços essenciais</li>
-  </ul>
-
-  <h4>Impactos econômicos:</h4>
-  <ul>
-    <li>Danos à infraestrutura</li>
-    <li>Prejuízos à agricultura e pecuária</li>
-    <li>Altos gastos com reconstrução</li>
-    <li>Redução no desenvolvimento regional</li>
-  </ul>
+<section id="contato" class="contato">
+    <h2>Fale Conosco</h2>
+    <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+    </form>
 </section>
 
 <footer class="footer">
-  <p>© 2025 Impacto Terra. Todos os direitos reservados.</p>
+    <p>© 2025 Impacto Terra. Todos os direitos reservados.</p>
+    <div class="social">
+        <a href="#">Instagram</a> | 
+        <a href="#">Facebook</a> | 
+        <a href="#">LinkedIn</a>
+    </div>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
